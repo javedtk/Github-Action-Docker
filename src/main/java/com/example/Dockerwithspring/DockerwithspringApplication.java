@@ -1,0 +1,27 @@
+package com.example.Dockerwithspring;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+public class DockerwithspringApplication {
+	@GetMapping("/get")
+	public String welcom(){
+		return "This is first application with docker";
+	}
+	/*echo "# Github-Action-Docker" >> README.md
+	git init
+	git add README.md
+	git commit -m "first commit"
+	git branch -M main
+	git remote add origin https://github.com/javedtk/Github-Action-Docker.git
+	git push -u origin main*/
+
+	public static void main(String[] args) {
+		SpringApplication.run(DockerwithspringApplication.class, args);
+	}
+
+}
